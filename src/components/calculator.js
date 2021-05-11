@@ -1,33 +1,31 @@
 import React, { useState } from 'react';
+import './calculator.css';
 
 class Calculator extends React.Component {
     render() {
       return (
-        <div className="button">
+        <div className="buttons">
+          <button className="button" name="1" onClick={event => this.props.onClick(event.target.name)}>1</button>          
+          <button className="button" name="2" onClick={event => this.props.onClick(event.target.name)}>2</button>
+          <button className="button" name="3" onClick={event => this.props.onClick(event.target.name)}>3</button>
+          <button className="button" name="+" onClick={event => this.props.onClick(event.target.name)}>+</button><br/>
 
-          {/* snap niet wat this.props nou hier doet/inhoudt  */}
+          <button className="button" name="4" onClick={event => this.props.onClick(event.target.name)}>4</button>
+          <button className="button" name="5" onClick={event => this.props.onClick(event.target.name)}>5</button>
+          <button className="button" name="6" onClick={event => this.props.onClick(event.target.name)}>6</button>
+          <button className="button" name="-" onClick={event => this.props.onClick(event.target.name)}>-</button><br/>
 
-          <button name="1" onClick={a => this.props.onClick(a.target.name)}>1</button>          
-          <button name="2" onClick={a => this.props.onClick(a.target.name)}>2</button>
-          <button name="3" onClick={a => this.props.onClick(a.target.name)}>3</button>
-          <button name="+" onClick={a => this.props.onClick(a.target.name)}>+</button><br/>
+          <button className="button" name="7" onClick={event => this.props.onClick(event.target.name)}>7</button>
+          <button className="button" name="8" onClick={event => this.props.onClick(event.target.name)}>8</button>
+          <button className="button" name="9" onClick={event => this.props.onClick(event.target.name)}>9</button>
+          <button className="button" name="*" onClick={event => this.props.onClick(event.target.name)}>x</button><br/>
 
-          <button name="4" onClick={a => this.props.onClick(a.target.name)}>4</button>
-          <button name="5" onClick={a => this.props.onClick(a.target.name)}>5</button>
-          <button name="6" onClick={a => this.props.onClick(a.target.name)}>6</button>
-          <button name="-" onClick={a => this.props.onClick(a.target.name)}>-</button><br/>
+          <button className="button" name="." onClick={event => this.props.onClick(event.target.name)}>.</button>
+          <button className="button" name="0" onClick={event => this.props.onClick(event.target.name)}>0</button>
+          <button className="button" name="C" onClick={event => this.props.onClick(event.target.name)}>C</button>
+          <button className="button" name="/" onClick={event => this.props.onClick(event.target.name)}>÷</button><br/>
 
-          <button name="7" onClick={a => this.props.onClick(a.target.name)}>7</button>
-          <button name="8" onClick={a => this.props.onClick(a.target.name)}>8</button>
-          <button name="9" onClick={a => this.props.onClick(a.target.name)}>9</button>
-          <button name="*" onClick={a => this.props.onClick(a.target.name)}>x</button><br/>
-
-          <button name="." onClick={a => this.props.onClick(a.target.name)}>.</button>
-          <button name="0" onClick={a => this.props.onClick(a.target.name)}>0</button>
-          <button name="=" onClick={a => this.props.onClick(a.target.name)}>=</button>
-          <button name="/" onClick={a => this.props.onClick(a.target.name)}>÷</button><br/>
-
-          <button name="C" onClick={a => this.props.onClick(a.target.name)}>C</button><br/>
+          <button className="button_equal" name="=" onClick={event => this.props.onClick(event.target.name)}>=</button><br/>    
         </div>
       );
     }
