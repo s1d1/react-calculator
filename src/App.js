@@ -1,25 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
+import Calculator from './components/calculator';
 
-function App() {
-  return (
-    <div className="App">
+class App extends React.Component {
+
+  // wat betekenen constructor() en super()? is dit om aan te geven dat dit de parent component is?
+
+  constructor() {
+    super();
+    
+    this.state = {
+      result: "" 
+    }
+
+  }
+
+  render() {
+    return (
+      <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {this.state.result}
+        <Calculator/>
       </header>
     </div>
-  );
+    );
+  }
 }
 
 export default App;
