@@ -14,6 +14,7 @@ class App extends React.Component {
 
   onClick = button => {
     if (button === "=") {
+      
       // als er geen operator wordt gebruikt, display dan de input 
       let string = this.state.formula
       if (!(string.includes("+")) && !(string.includes("-")) && !(string.includes("/")) && !(string.includes("*"))){
@@ -27,7 +28,9 @@ class App extends React.Component {
       }
     }
     else if (button === "C") {
-      this.clear()
+      this.setState({
+        formula: ""
+      })
     }
     else {
       this.setState({
@@ -82,12 +85,6 @@ class App extends React.Component {
     this.setState({
       formula: solution
     }) 
-  }
-
-  clear = () => {
-    this.setState({
-      formula: ""
-    })
   }
 
   render() {

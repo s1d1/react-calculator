@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './calculator.css';
 
 class Calculator extends React.Component {
